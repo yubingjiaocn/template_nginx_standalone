@@ -495,14 +495,11 @@ resource "camc_softwaredeploy" "NginxNode01_nginx" {
   "environment_name": "_default",
   "host_ip": "${vsphere_virtual_machine.NginxNode01.clone.0.customize.0.network_interface.0.ipv4_address}",
   "node_name": "${var.NginxNode01-name}",
-  "runlist": "role[nginx]",
+  "runlist": "recipe[nginx]",
   "node_attributes": {
     "ibm": {
       "sw_repo": "${var.ibm_sw_repo}",
       "sw_repo_user": "${var.ibm_sw_repo_user}"
-    },
-    "ibm_internal": {
-      "roles": "[nginx]"
     },
     "nginx": {
       "repo_source": "nil"

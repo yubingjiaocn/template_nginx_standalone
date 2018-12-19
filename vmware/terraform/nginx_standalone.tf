@@ -429,6 +429,7 @@ gpgcheck=0
 EOR
     yum makecache
     service firewalld stop
+    setenforce 0
 
 EOF
   }
@@ -437,7 +438,7 @@ EOF
   provisioner "remote-exec" {
     inline = [
       "bash -c 'chmod +x NginxNode01_enable_yum.sh'",
-      "bash -c './NginxNode01_enable_yum.sh >> NginxNode01_add_ssh_key.log 2>&1'",
+      "bash -c './NginxNode01_enable_yum.sh >> NginxNode01_enable_yum.log 2>&1'",
     ]
   }
 
@@ -579,6 +580,11 @@ http {
     }
   }
 }
+
+events {
+  worker_connections  1024;
+}
+
 
 EOF
   }

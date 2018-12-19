@@ -544,7 +544,7 @@ EOT
 #########################################################
 
 resource "null_resource" "NginxNode01_Conf" {
-  depends_on = ["vsphere_virtual_machine.NginxNode01"]
+  depends_on = ["vsphere_virtual_machine.NginxNode01", "camc_softwaredeploy.NginxNode01_nginx"]
 
   # Specify the ssh connection
   connection {

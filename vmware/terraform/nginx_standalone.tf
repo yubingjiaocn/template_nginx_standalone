@@ -422,8 +422,8 @@ baseurl=ftp://jiajj%40cn.ibm.com:Passw0rd@ftp3.linux.ibm.com/redhat/yum/server/7
 enabled=1
 gpgcheck=0
 [epel]
-name=Extra Packages for Enterprise Linux 7 - $basearch
-baseurl=http://9.181.26.145/repo/epel/7/$basearch
+name=Extra Packages for Enterprise Linux 7 - \$basearch
+baseurl=http://9.181.26.145/repo/epel/7/\$basearch
 enabled=1
 gpgcheck=0
 EOR

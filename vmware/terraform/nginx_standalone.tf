@@ -593,7 +593,7 @@ output "NginxNode01_name" {
 }
 
 output "NginxNode01_roles" {
-  value = "tomcat"
+  value = "nginx"
 }
 
 output "stack_id" {

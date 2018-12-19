@@ -561,7 +561,7 @@ resource "null_resource" "NginxNode01_Conf" {
   }
 
   provisioner "file" {
-    destination = "/etc/nginx/nginx.cong"
+    destination = "/etc/nginx/nginx.conf"
     content     = <<EOF
 http {
   upstream backend {

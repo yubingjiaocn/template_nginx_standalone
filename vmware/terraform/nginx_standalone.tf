@@ -588,6 +588,12 @@ events {
 
 EOF
   }
+
+  provisioner "remote-exec" {
+    inline = [
+      "bash -c '/bin/systemctl restart nginx.service'"
+    ]
+  }
 }
 
 output "NginxNode01_ip" {
